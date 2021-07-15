@@ -1,11 +1,10 @@
-import { useParams } from "react-router-dom";
+import QuoteForm from "../components/quotes/QuoteForm";
 
 const NewQuote = () => {
-  const params = useParams();
-  return (
-    <div>
-      <h1>New Quote</h1>
-    </div>
-  );
+  const onAddHandler = (quoteData) => {
+    console.log(quoteData);
+  };
+
+  return <QuoteForm onAddQuote={onAddHandler} />;
 };
 export default NewQuote;
