@@ -1,5 +1,3 @@
-const FIREBASE_DOMAIN = "https://react-prep-default-rtdb.firebaseio.com";
-
 export async function getAllQuotes(data) {
   const transformedQuotes = [];
 
@@ -28,32 +26,11 @@ export async function addQuote(quoteData) {
   console.log("Data Sent! " + quoteData);
 }
 
-export async function addComment(requestData, data) {
-  //   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`, {
-  //     method: 'POST',
-  //     body: JSON.stringify(requestData.commentData),
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   });
-  //   const data = await response.json();
-
-  //   if (!response.ok) {
-  //     throw new Error(data.message || 'Could not add comment.');
-  //   }
-
-  return { commentId: data.name };
+export async function addComment(data) {
+  console.log("Added comment" + data);
 }
 
-export async function getAllComments(quoteId, data) {
-  //   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
-
-  //   const data = await response.json();
-
-  //   if (!response.ok) {
-  //     throw new Error(data.message || 'Could not get comments.');
-  //   }
-
+export async function getAllComments(data) {
   const transformedComments = [];
 
   for (const key in data) {
